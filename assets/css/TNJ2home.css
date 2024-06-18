@@ -53,7 +53,7 @@ section {
     border-radius: .5rem;
     background: #eeeeee51;
     color: var(--pink);
-    padding: .5rem 3.5rem;
+    padding: 1.2rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
 }
@@ -126,7 +126,7 @@ header .fa-bars {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(homesection1.jpg) no-repeat;
+    background: url(../image/homesection1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -438,6 +438,13 @@ header .fa-bars {
     border-radius: .5rem;
     margin: .7rem 0;
     width: 100%;
+    min-height: 42px;
+}
+
+.contact-form {
+    min-height: 45px !important;
+    display: block;
+    font-size: 18px;
 }
 
 .contact .row form .box:focus {
@@ -577,4 +584,25 @@ header .fa-bars {
     .heading {
         font-size: 3rem;
     }
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.form-group p{
+    font-size: 2rem;
+}
+
+.shoppingcart hr{
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mt-0{
+    margin-top: 0!important;
+    padding-top: 2rem!important;
 }
