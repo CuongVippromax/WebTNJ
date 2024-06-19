@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h3><a href="detail/<?= $item['id'] ?>/<?= $item['slug'] ?>"><?= $item['name'] ?></a></h3>
+                                        <h3><a href="detail.php?id=<?= $item['id'] ?>&tensp=<?= $item['slug'] ?>"><?= $item['name'] ?></a></h3>
                                         <div class="price"><?= number_format($item['price'],0) ?> <span><?= number_format($item['pricesale'],0) ?></span></div>
                                     </div>
                                 </div>
