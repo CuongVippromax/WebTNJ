@@ -32,10 +32,26 @@
         $json = json_encode($_SESSION['cart']);
         $db->query("INSERT INTO `orders`(`fullname`, `email`, `phone`, `address`, `notes`,`payment`, `json`) VALUES ('$fullname','$email','$phone','$address','$notes','$payment','$json')");
         $id = mysqli_insert_id($db);
+        $oll = 0;
+        if($id){
+            if(isset($_SESSION['cart'])){
+                $cart = $_SESSION['cart'];
+                foreach ($cart as $product_id => $carts) {
+                    $oll++;
+                    $qusntity = $carts['quantity'];
+                    $get_product = mysqli_fetch_assoc($db->query("SELECT * FROM product WHERE id = ".$product_id));
+                    $update_qty = (int) $get_product['quantity'] - (int)$qusntity;
+                    $db->query("UPDATE `product` SET `quantity_old` = '$update_qty' WHERE id = '$product_id' ");
+                }
+            }
+        }
         unset($_SESSION['cart']);
-        ?>
-         <meta http-equiv="refresh" content="0;url=<?= $url.'/orderpay.php?id='.$id.'&token='.md5($id) ?>">
-        <?php
+        if($oll > 0){
+            ?>
+                <meta http-equiv="refresh" content="0;url=<?= $url.'/orderpay.php?id='.$id.'&token='.md5($id) ?>">
+            <?php
+        }
+       
         exit;
     }
     $cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;

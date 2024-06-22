@@ -12,6 +12,7 @@
         if($check->num_rows <= 0){
             $result = $db->query("INSERT INTO `user`(`name`, `email`, `phone`, `password`) VALUES ('$name','$email','$phone','$password')");
             echo json_encode(true);
+            exit;
         } 
     }
 
@@ -22,5 +23,6 @@
         $content = isset($_POST['content']) ? md5($_POST['content']) : '';
         $result = $db->query("INSERT INTO `contact`(`name`, `email`, `phone`, `content`) VALUES ('$name','$email','$phone','$content')");
         echo json_encode(true);
+        exit;
     }
 ?>

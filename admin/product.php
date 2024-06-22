@@ -212,6 +212,7 @@
                                     <th>Price</th>
                                     <th>Price Sale</th>
                                     <th>Quantity</th>
+                                    <th>Stock</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -227,6 +228,7 @@
                                                 <td><?= $result['price'] ?></td>
                                                 <td><?= $result['pricesale'] ?></td>
                                                 <td><?= $result['quantity'] ?></td>
+                                                <td><?= $result['quantity_old'] ?></td>
                                                 <td>
                                                     <a class="btn btn-sm btn-primary" href="<?= $url ?>/admin/product.php?action=edit&id=<?= $result['id'] ?>">Chỉnh sửa</a>
                                                     <a class="btn btn-sm btn-danger" href="?action=delete&id=<?= $result['id'] ?>">Xóa</a>
