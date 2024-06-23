@@ -1,47 +1,49 @@
 <?php
-    include_once("DB/mysqli.php");
-    $connect = new Connect();
-    $db = $connect->sql();
-    $url = $connect->url();
-    session_start();
+include_once("DB/mysqli.php");
+$connect = new Connect();
+$db = $connect->sql();
+$url = $connect->url();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <?php
-    
-    if(isset($_POST['action']) && $_POST['action'] == 'login'){
-        $email = $_POST['email'];
-        $password = md5($_POST['pswd']);
-        $check_login = $db->query("SELECT * FROM user WHERE `email` = '$email' AND `password` = '$password' AND type = 1 LIMIT 1");
-        if($check_login->num_rows > 0){
-            $_SESSION['email_session'] = $email;
-            ?>
-             <meta http-equiv="refresh" content="0;url=<?= $url ?>/login.php?t=1">
-            <?php
-            
-            exit;
-        }else{
-            $message = 'Email or Password is incorrect';
-        }
-    }
-    if(isset($_GET['t'])){
-        ?>
-        <meta http-equiv="refresh" content="0;url=<?= $url ?>">
-        <?php
-    }
-    if(isset($_GET['type'])){
-        $message = '';
-    }
+
+if (isset($_POST['action']) && $_POST['action'] == 'login') {
+    $email = $_POST['email'];
+    $password = md5($_POST['pswd']);
+    $check_login = $db->query("SELECT * FROM user WHERE `email` = '$email' AND `password` = '$password' AND type = 1 LIMIT 1");
+    if ($check_login->num_rows > 0) {
+        $_SESSION['email_session'] = $email;
 ?>
+        <meta http-equiv="refresh" content="0;url=<?= $url ?>/login.php?t=1">
+    <?php
+
+        exit;
+    } else {
+        $message = 'Email or Password is incorrect';
+    }
+}
+if (isset($_GET['t'])) {
+    ?>
+    <meta http-equiv="refresh" content="0;url=<?= $url ?>">
+<?php
+}
+if (isset($_GET['type'])) {
+    $message = '';
+}
+?>
+
 <head>
     <title>Sign Up and Login Form</title>
     <link rel="stylesheet" type="text/css" href="assets/css/SignUp&Login.css?v=<?= time() ?>">
 </head>
 <style>
-    .login.active{
+    .login.active {
         transform: translateY(-500px);
     }
 </style>
+
 <body>
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
@@ -71,8 +73,8 @@
 </body>
 <script src="<?= $url ?>/assets/js/jquery.js?v=<?= time() ?>"></script>
 <script>
-    $(document).ready(function(){
-        $('.sign-up').click(function(e){
+    $(document).ready(function() {
+        $('.sign-up').click(function(e) {
             e.preventDefault();
             var txt = $('input[name="txt"]').val();
             var email = $('input[name="email"]').val();
@@ -80,15 +82,22 @@
             var pswd = $('input[name="pswd"]').val();
             var action = 'register';
             $.ajax({
-                type : "POST",
-                dataType : "JSON",
-                url : "ajax.php",
-                data : { action, txt, email, broj, pswd },
-                success:function(){
+                type: "POST",
+                dataType: "JSON",
+                url: "ajax.php",
+                data: {
+                    action,
+                    txt,
+                    email,
+                    broj,
+                    pswd
+                },
+                success: function() {
                     $('.login').addClass('active');
                 }
             });
         });
     });
 </script>
+
 </html>
