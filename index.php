@@ -260,22 +260,22 @@ $cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
 <!-- contact section starts -->
 
-    <section class="contact" id="contact">
-        <h1 class="heading"> <span>contact</span> us</h1>
-        <div class="row">
-            <form action="">
-                <input type="text" name="name" placeholder="Name" class="box" required>
-                <input type="email" name="email" placeholder="Email" class="box" required>
-                <input type="number" name="phone" placeholder="Phone" class="box" required>
-                <textarea name="" name="content" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
-                <input type="button" class="contact-form" value="send message" class="btn">
-                <p class="success-contact" style="display:none;color: #fff; font-size: 18px;">Send contact us successfully</p>
-            </form>
-            <div class="image">
-                <img src="https://kimcuongdanang.com/wp-content/uploads/2022/07/Gems-Casa-bai-viet-phoi-trang-suc-quan-ao-5.jpg" alt="">
-            </div>
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>contact</span> us</h1>
+    <div class="row">
+        <form action="">
+            <input type="text" name="name" placeholder="Name" class="box" required>
+            <input type="email" name="email" placeholder="Email" class="box" required>
+            <input type="number" name="phone" placeholder="Phone" class="box" required>
+            <textarea name="" name="content" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
+            <input type="button" class="contact-form btn" value="send message">
+            <p class="success-contact" style="display:none;color: #fff; font-size: 18px;">Send contact us successfully</p>
+        </form>
+        <div class="image">
+            <img src="https://kimcuongdanang.com/wp-content/uploads/2022/07/Gems-Casa-bai-viet-phoi-trang-suc-quan-ao-5.jpg" alt="">
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- contact section ends -->
 
