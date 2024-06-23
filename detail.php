@@ -1,4 +1,4 @@
-<?php include_once("include/header.php") ?>
+<?php include_once("include/headerdetail.php") ?>
 <?php
     if(isset($_POST['action']) && $_SERVER['REQUEST_METHOD'] =='POST' && $_POST['action'] == 'addtocart'){
         $id_product = $_POST['id_product'];
