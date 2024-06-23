@@ -1,18 +1,13 @@
 :root {
-    --pink: #e18fcf;
-    --yelow: #d7ab64;
-    --light-yelow: #caa514;
-    --gray: #C7C8CC;
-    --light-gray: #F2EFE5;
-    --while-gray: #e1dce9;
+    --pink: #f171af;
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Libre Bodoni", serif;
-    /* font-family: "Libre Bodoni", serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -25,7 +20,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
-    background: #000000;
+
 }
 
 section {
@@ -36,7 +31,7 @@ section {
 
     text-align: center;
     font-size: 4rem;
-    color: var(--light-gray);
+    color: #333;
     padding: 1rem;
     margin: 2rem 0;
     background: rgba(237, 145, 218, 0.1);
@@ -50,17 +45,17 @@ section {
 .btn {
     display: inline-block;
     margin-top: 1rem;
-    border-radius: .5rem;
-    background: #eeeeee51;
-    color: var(--pink);
-    padding: 1.2rem 3.5rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
 }
 
 .btn:hover {
-    background: #de97ceaa;
-    color: var(--light-gray);
+
+    background: var(--pink);
 }
 
 header {
@@ -68,7 +63,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: #000000;
+    background: #fff;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -80,18 +75,18 @@ header {
 
 header .logo {
     font-size: 3rem;
-    color: #696;
+    color: var(--pink);
     font-weight: bolder;
 }
 
 header .logo span {
-    color: var(--pink);
+    color: #333;
 }
 
 header .navbar a {
     font-size: 2rem;
     padding: 0 1.5em;
-    color: var(--light-gray);
+    color: #666;
 }
 
 header .navbar a:hover {
@@ -105,7 +100,25 @@ header .icons a {
 }
 
 header .icons a:hover {
-    color: var(--light-gray);
+    color: #333;
+}
+
+header .icons .reline {
+    position: relative;
+}
+
+header .icons .reline .bage {
+    position: absolute;
+    top: -15px;
+    font-size: 12px;
+    background: #c72692;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    border-radius: 500px;
+    right: -9px;
 }
 
 header #toggler {
@@ -114,7 +127,7 @@ header #toggler {
 
 header .fa-bars {
     font-size: 3rem;
-    color: var(--pink);
+    color: #333;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -122,11 +135,17 @@ header .fa-bars {
     display: none;
 }
 
+header .fa-bars:hover {
+    color: var(--pink);
+    border: .1rem solid var(--pink);
+}
+
+
 .home {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(../image/homesection1.jpg) no-repeat;
+    background: url(https://coinscarats.com/_next/image?url=%2Fassets%2Fimg%2Fpink-image-cover.jpeg&w=3840&q=75) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -137,12 +156,12 @@ header .fa-bars {
 
 .home .content h3 {
     font-size: 6rem;
-    color: var(--while-gray);
-    text-shadow: 4px 2px 9px #b8b5c454;
+    color: #333;
+
 }
 
 .home .content span {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--pink);
     padding: 1rem 0;
     line-height: 1.5;
@@ -150,7 +169,7 @@ header .fa-bars {
 
 .home .content p {
     font-size: 1.5rem;
-    color: rgb(205, 140, 200);
+    color: #999;
     padding: 1rem 0;
     line-height: 1.5;
 }
@@ -183,8 +202,8 @@ header .fa-bars {
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
-    background: #fff;
-    color: #cf51b4;
+    background: #ffffff70;
+    color: #fff;
     width: 100%;
     padding: 1rem 2rem;
     text-align: center;
@@ -198,12 +217,12 @@ header .fa-bars {
 
 .about .row .content h3 {
     font-size: 3rem;
-    color: var(--light-gray);
+    color: #333;
 }
 
 .about .row .content p {
     font-size: 1.5rem;
-    color: var(--pink);
+    color: #999;
     padding: 5rem 0;
     padding-top: 1rem;
     line-height: 1.5;
@@ -267,8 +286,8 @@ header .fa-bars {
     left: 1rem;
     padding: .7rem 1rem;
     font-size: 2rem;
-    color: #f58bde;
-    background: rgba(231, 193, 221, 0.216);
+    color: var(--pink);
+    background: rgba(255, 51, 153, .05);
     z-index: 1;
     border-radius: .5rem;
 }
@@ -297,6 +316,19 @@ header .fa-bars {
     display: flex;
 }
 
+.products .box-container .box .image .icons form {
+    width: 80%;
+}
+
+.products .box-container .box .image .icons form button {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 100%;
+    background: var(--pink);
+    color: #fff;
+}
+
 .products .box-container .box:hover .image .icons {
     bottom: 0;
 }
@@ -305,9 +337,13 @@ header .fa-bars {
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    width: 50%;
+    width: 20%;
     background: var(--pink);
     color: #fff;
+}
+
+.products .box-container .box .image .icons form button:hover {
+    background: #000000;
 }
 
 .products .box-container .box .image .icons a:hover {
@@ -326,9 +362,11 @@ header .fa-bars {
 }
 
 .products .box-container .box .content h3 {
-    font-size: 2.5rem;
-    color: #bcb7b7;
+    font-size: 1.8rem;
+    color: #333;
 }
+
+
 
 .products .box-container .box .content .price {
     font-size: 2.5rem;
@@ -416,7 +454,7 @@ header .fa-bars {
     padding: 2rem 2.5rem;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     border: .1rem solid rgba(0, 0, 0, .1);
-    background: #eb9ee127;
+    background: #fff;
     border-radius: .5rem;
 }
 
@@ -432,7 +470,6 @@ header .fa-bars {
     padding: 1rem;
     font-size: 1.7rem;
     color: #333;
-    background: #ffffffc9;
     text-transform: none;
     border: .1rem solid rgba(0, 0, 0, .1);
     border-radius: .5rem;
@@ -541,7 +578,7 @@ header .fa-bars {
         top: 100%;
         left: 0;
         right: 0;
-        background: #000000;
+        background: #eee;
         border-top: 1rem solid rgba(0, 0, 0, .1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
@@ -553,7 +590,7 @@ header .fa-bars {
     header .navbar a {
         margin: 1.5rem;
         padding: 1.5rem;
-        background: #000000;
+        background: #fff;
         border: .1rem solid rgba(0, 0, 0, .1);
         display: block;
     }
@@ -586,15 +623,15 @@ header .fa-bars {
     }
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
-.form-group p{
+.form-group p {
     font-size: 2rem;
 }
 
-.shoppingcart hr{
+.shoppingcart hr {
     width: 100%;
     display: block;
     border-bottom: 1px solid #ccc;
@@ -602,7 +639,7 @@ header .fa-bars {
     margin-bottom: 1.5rem;
 }
 
-.mt-0{
-    margin-top: 0!important;
-    padding-top: 2rem!important;
+.mt-0 {
+    margin-top: 0 !important;
+    padding-top: 2rem !important;
 }
