@@ -217,7 +217,7 @@
                 <input type="text" name="name" placeholder="Name" class="box" required>
                 <input type="email" name="email" placeholder="Email" class="box" required>
                 <input type="number" name="phone" placeholder="Phone" class="box" required>
-                <textarea name="" name="content" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                <textarea name="contentss" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
                 <input type="button" class="contact-form" value="send message" class="btn">
                 <p class="success-contact" style="display:none;color: #fff; font-size: 18px;">Send contact us successfully</p>
             </form>
@@ -237,7 +237,7 @@
             var name = $('input[name="name"]').val();
             var email = $('input[name="email"]').val();
             var phone = $('input[name="phone"]').val();
-            var content = $('textarea[name="content"]').val();
+            var content = $('textarea[name="contentss"]').val();
             var action = 'contact';
             $.ajax({
                 type : "POST",
