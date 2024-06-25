@@ -5,7 +5,7 @@ class Connect
     {
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "181124";
         $dbname = "tnj";
 
         // Create connection
