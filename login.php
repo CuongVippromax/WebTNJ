@@ -50,23 +50,23 @@ if (isset($_GET['type'])) {
 
         <div class="signup">
             <form>
-                <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="User name" required="">
+                <label for="chk" aria-hidden="true">Đăng ký</label>
+                <input type="text" name="txt" placeholder="Họ và tên" required="">
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="number" name="broj" placeholder="Phone" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
-                <button class="sign-up">Sign up</button>
+                <input type="number" name="broj" placeholder="Số điện thoại" required="">
+                <input type="password" name="pswd" placeholder="Mật khẩu" required="">
+                <button class="sign-up">Gửi</button>
             </form>
         </div>
 
         <div class="login <?= isset($message) ? 'active' : '' ?>">
             <form method="POST">
-                <label for="chk" aria-hidden="true">Login</label>
+                <label for="chk" aria-hidden="true">Đăng nhập</label>
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
+                <input type="password" name="pswd" placeholder="Mật khẩu" required="">
                 <p style="text-align:center"><?= isset($message) ? $message : '' ?></p>
                 <input type="hidden" name="action" value="login">
-                <button name="login" type="submit">Login</button>
+                <button name="login" type="submit">Gửi</button>
             </form>
         </div>
     </div>

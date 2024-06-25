@@ -14,12 +14,13 @@
             <h3>Đường dẫn nhanh</h3>
             <?php
             if (isset($_SESSION['email_session'])) {
+
             ?>
                 <a href="<?= $url ?>/myaccount.php">Tài khoản</a>
             <?php
             } else {
             ?>
-                <a href="<?= $url ?>/login.php?type">Tài khoản</a>
+                <a href="<?= $url ?>/login.php">Tài khoản</a>
             <?php
             }
             ?>
@@ -31,7 +32,7 @@
             <a href="">Hạ Long-Quảng Ninh</a>
             <a href="">Hải Phòng</a>
             <a href="">Hà Nội</a>
-            <a href="">Hò Chí Minh</a>
+            <a href="">Hồ Chí Minh</a>
         </div>
         <div class="box">
             <h3>Địa chỉ liên hệ</h3>

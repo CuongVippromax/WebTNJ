@@ -269,7 +269,7 @@ $cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
             <input type="number" name="phone" placeholder="Phone" class="box" required>
             <textarea name="" name="content" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
             <input type="button" class="contact-form btn" value="send message">
-            <p class="success-contact" style="display:none;color: #fff; font-size: 18px;">Send contact us successfully</p>
+            <p class="success-contact" style="display:none;color: #333; font-size: 15px;">Send contact us successfully</p>
         </form>
         <div class="image">
             <img src="https://kimcuongdanang.com/wp-content/uploads/2022/07/Gems-Casa-bai-viet-phoi-trang-suc-quan-ao-5.jpg" alt="">

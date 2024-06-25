@@ -1,18 +1,12 @@
 :root {
-    --pink: #e18fcf;
-    --yelow: #d7ab64;
-    --light-yelow: #caa514;
-    --gray: #C7C8CC;
-    --light-gray: #F2EFE5;
-    --while-gray: #e1dce9;
+    --pink: #f171af;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Libre Bodoni", serif;
-    /* font-family: "Libre Bodoni", serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -25,7 +19,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
-    background: #000000;
+
 }
 
 section {
@@ -36,7 +30,7 @@ section {
 
     text-align: center;
     font-size: 4rem;
-    color: var(--light-gray);
+    color: #333;
     padding: 1rem;
     margin: 2rem 0;
     background: rgba(237, 145, 218, 0.1);
@@ -50,17 +44,17 @@ section {
 .btn {
     display: inline-block;
     margin-top: 1rem;
-    border-radius: .5rem;
-    background: #eeeeee51;
-    color: var(--pink);
-    padding: .5rem 3.5rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
 }
 
 .btn:hover {
-    background: #de97ceaa;
-    color: var(--light-gray);
+
+    background: var(--pink);
 }
 
 header {
@@ -68,7 +62,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: #000000;
+    background: #fff;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -80,26 +74,71 @@ header {
 
 header .logo {
     font-size: 3rem;
-    color: #696;
+    color: var(--pink);
     font-weight: bolder;
 }
 
 header .logo span {
+    color: #333;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5em;
+    color: #666;
+}
+
+header .navbar a:hover {
     color: var(--pink);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--pink);
+}
+
+header .icons a:hover {
+    color: #333;
+}
+
+header .icons .reline {
+    position: relative;
+}
+
+header .icons .reline .bage {
+    position: absolute;
+    top: -15px;
+    font-size: 12px;
+    background: #c72692;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    border-radius: 500px;
+    right: -9px;
 }
 
 header #toggler {
     display: none;
 }
 
-header .text {
-    border-bottom: .1rem solid var(--pink);
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
 }
 
-header .text h1 {
-    color: var(--light-gray);
-    font-size: 2.5rem;
+header .fa-bars:hover {
+    color: var(--pink);
+    border: .1rem solid var(--pink);
 }
+
 
 .shoppingcart-container {
     display: flex;
@@ -113,7 +152,6 @@ header .text h1 {
     padding: 5rem 5rem;
     width: 60%;
     height: 100%;
-    background: linear-gradient(180deg, #000000, #460e49, #d971c8, #efe8ed);
     padding-bottom: 15rem;
 }
 
@@ -308,7 +346,6 @@ header .text h1 {
     flex-wrap: wrap;
     padding: 2rem 2rem;
     width: 40%;
-    background: linear-gradient(180deg, #000000, #360a38, #cd6abd, #f6ebf3);
     justify-content: center;
 
 }

@@ -1,10 +1,6 @@
 :root {
-    --pink: #e18fcf;
-    --yelow: #d7ab64;
-    --light-yelow: #caa514;
-    --gray: #C7C8CC;
-    --light-gray: #F2EFE5;
-    --while-gray: #e1dce9;
+    --pink: #f171af;
+
 }
 
 body {
@@ -14,8 +10,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: "Libre Bodoni", serif;
-    background: linear-gradient(to bottom, #d4aee5, #774395, #33243e);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    background: url(https://cdn.shopify.com/s/files/1/2703/8128/files/Blog_Pink-Article-image-2_1024x1024.png?v=1695822523);
 }
 
 .main {
@@ -24,6 +22,7 @@ body {
     background: red;
     overflow: hidden;
     background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    opacity: 9;
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
 }
@@ -39,7 +38,7 @@ body {
 }
 
 label {
-    color: #fff;
+    color: var(--pink);
     font-size: 2.3em;
     justify-content: center;
     display: flex;
@@ -52,7 +51,7 @@ label {
 input {
     width: 60%;
     height: 10px;
-    background: #e0dede;
+    background: #ffffff;
     justify-content: center;
     display: flex;
     margin: 20px auto;
@@ -70,8 +69,8 @@ button {
     display: block;
     margin-top: 30px;
     color: var(--pink);
-    background: #d197f386;
-    border-radius: 5px;
+    background: #ffffff;
+    border-radius: 15px;
     font-size: 1em;
     font-weight: bold;
     outline: none;
@@ -81,25 +80,26 @@ button {
 }
 
 button:hover {
-    background: #de97ceaa;
-    color: var(--light-gray);
+    background: var(--pink);
+    color: #333;
 }
 
 .login {
     height: 460px;
-    background: #eee;
+    background: #ec91cea7;
     border-radius: 60% / 10%;
     transform: translateY(-180px);
     transition: .8s ease-in-out;
 }
 
 .login label {
-    color: var(--pink);
+    color: #ffffff;
     transform: scale(.6);
 }
 
 #chk:checked~.login {
     transform: translateY(-500px);
+    background: #ec91ce;
 }
 
 #chk:checked~.login label {
