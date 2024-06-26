@@ -74,13 +74,22 @@ header {
 }
 
 header .logo {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--pink);
-    font-weight: bolder;
+    font-weight: 1000;
+    background-image: url(https://i.pinimg.com/originals/3b/e8/ba/3be8ba724e3bc3c01ab91b478eae2749.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
 }
 
 header .logo span {
-    color: #333;
+    background-image: url(https://i.pinimg.com/originals/3b/e8/ba/3be8ba724e3bc3c01ab91b478eae2749.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
 }
 
 header .navbar a {
@@ -630,25 +639,4 @@ header .fa-bars:hover {
     .heading {
         font-size: 3rem;
     }
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.form-group p {
-    font-size: 2rem;
-}
-
-.shoppingcart hr {
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #ccc;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.mt-0 {
-    margin-top: 0 !important;
-    padding-top: 2rem !important;
 }

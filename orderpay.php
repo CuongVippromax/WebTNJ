@@ -1,4 +1,4 @@
-<?php include_once("include/header.php") ?>
+<?php include_once("include/headercart.php") ?>
 
 <section class="home justify-center" id="home">
     <div class="content text-center">
@@ -7,19 +7,21 @@
 </section>
 
 <section>
-    <div class="mx-19">
-        <div class="shoppingcart-container">
-            <?php
-            if (isset($_GET['id']) && isset($_GET['token']) && md5($_GET['id']) == $_GET['token']) {
-                $id = isset($_GET['id']) ? $_GET['id'] : '';
-                $result = $db->query("SELECT * FROM orders WHERE id = " . $id);
-                $detail = mysqli_fetch_assoc($result);
-            ?>
-                <div class="shoppingcart mt-0">
-                    <div class="scroll">
-                        <h3 style="font-size:2rem;margin-bottom:1rem;color:#fff">INFOMATION</h3>
+
+    <div class="shoppingcart-container">
+        <?php
+        if (isset($_GET['id']) && isset($_GET['token']) && md5($_GET['id']) == $_GET['token']) {
+            $id = isset($_GET['id']) ? $_GET['id'] : '';
+            $result = $db->query("SELECT * FROM orders WHERE id = " . $id);
+            $detail = mysqli_fetch_assoc($result);
+        ?>
+            <div class="payment">
+                <div class="payment-container">
+                    <h3>Thông Tin Thanh Toán</h3>
+                    <form>
+
                         <div class="form-group">
-                            <label for=""><strong>Full name:</strong></label>
+                            <label for="">Họ Và Tên</label>
                             <p><?= $detail['fullname'] ?></p>
                         </div>
                         <hr>
@@ -29,17 +31,17 @@
                         </div>
                         <hr>
                         <div class="form-group">
-                            <label for="">Phone</label>
+                            <label for="">Số Điện Thoại</label>
                             <p><?= $detail['phone'] ?></p>
                         </div>
                         <hr>
                         <div class="form-group">
-                            <label for="">Address</label>
+                            <label for="">Địa Chị</label>
                             <p><?= $detail['address'] ?></p>
                         </div>
                         <hr>
                         <div class="form-group">
-                            <label for="">Notes</label>
+                            <label for="">Ghi Chú</label>
                             <p><?= $detail['notes'] ?></p>
                         </div>
                         <?php
@@ -52,7 +54,7 @@
                         ?>
                         <hr>
                         <div class="form-group">
-                            <label for="">Payment</label>
+                            <label for="">Phương thức thanh toán</label>
                             <p>
                                 <?php
                                 $result = $db->query("SELECT * FROM pttt WHERE id = " . $detail['id']);
@@ -83,11 +85,16 @@
                             <label for="">Tổng tiền</label>
                             <p><?= number_format($tongtien) ?>đ</p>
                         </div>
-                    </div>
+
+                    </form>
+
                 </div>
-                <div class="pay">
-                    <div class="mains">
-                        <h3 style="font-size:2rem;margin-bottom:1rem;color:#fff">PRODUCT ORDER</h3>
+            </div>
+            <div class="cart">
+                <div class="main">
+
+                    <div class="scroll">
+                        <h3 style="font-size: 2rem;">Chi tiết đơn hàng</h3>
                         <?php
                         $product = json_decode($detail['json'], true);
                         foreach ($product as $id_pro => $products) {
@@ -111,16 +118,19 @@
                         }
                         ?>
                     </div>
+
                 </div>
-            <?php
-            } else {
-            ?>
-                <p style="font-size:2rem">No order exists</p>
-            <?php
-            }
-            ?>
-        </div>
+
+            </div>
+        <?php
+        } else {
+        ?>
+            <p style="font-size:2rem">No order exists</p>
+        <?php
+        }
+        ?>
     </div>
+
 </section>
 
 <?php include_once("include/footer.php") ?>
