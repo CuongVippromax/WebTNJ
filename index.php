@@ -261,15 +261,15 @@ $cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 <!-- contact section starts -->
 
 <section class="contact" id="contact">
-    <h1 class="heading"> <span>contact</span> us</h1>
+    <h1 class="heading"> <span>Liên</span> hệ</h1>
     <div class="row">
         <form action="">
-            <input type="text" name="name" placeholder="Name" class="box" required>
+            <input type="text" name="name" placeholder="Họ và tên" class="box" required>
             <input type="email" name="email" placeholder="Email" class="box" required>
-            <input type="number" name="phone" placeholder="Phone" class="box" required>
-            <textarea name="" name="content" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
-            <input type="button" class="contact-form btn" value="send message">
-            <p class="success-contact" style="display:none;color: #333; font-size: 15px;">Send contact us successfully</p>
+            <input type="number" name="phone" placeholder="Số điện thoại" class="box" required>
+            <textarea name="" name="content" class="box" placeholder="Tin nhắn" id="" cols="30" rows="10"></textarea>
+            <input type="button" class="contact-form btn" value="Gửi">
+            <p class="success-contact" style="display:none;color: #333; font-size: 15px;">Gửi tin nhắn thành công</p>
         </form>
         <div class="image">
             <img src="https://kimcuongdanang.com/wp-content/uploads/2022/07/Gems-Casa-bai-viet-phoi-trang-suc-quan-ao-5.jpg" alt="">
